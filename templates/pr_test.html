@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic_product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search-result.css') }}">
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="homename">Omgreen</div>
+        <div>
+            <ul class="a">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/shopping">Shopping</a></li>
+                <li><a href="/blog">Blogs</a></li>
+                {% if username %}
+                <a href="/MyAccount/MyShop"><li>Cửa hàng của tôi</li></a>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="icon_header">
+            <ul>
+                <li><img src="https://cdn-icons-png.flaticon.com/256/3917/3917132.png" alt="search"></li>
+                {% if username %}
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/1200px-Shopping_cart_icon.svg.png" alt="cart"></li>
+                
+                <li><img src="/static/picture/Ellipse 3.png"></li>
+                {% else %}
+                <li><a href="/login" style="text-decoration: none;color: #000;font-weight: normal;">Đăng nhập</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+
+    <div id="banner">
+        <h2>DANH MỤC SẢN PHẨM</h2>
+    </div>
+
+    <div class="content">
+        <div class="content-left">
+            <h1>Tìm kiếm sản phẩm</h1>
+            <form method="POST" action="/searchData">
+                <input type="text" name="searchInput"
+                    placeholder="Nhập từ cần tìm">
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="categories">
+                <h2>Danh mục sản phẩm</h2>
+                <div class="item">
+                    <a href="">Rau củ hữu cơ</a>
+                </div>
+                <div class="item">
+                    <a href="">Trái cây</a>
+                </div>
+                <div class="item">
+                    <a href="">Hoa</a>
+                </div>
+                <div class="item">
+                    <a href="">Dụng cụ làm vườn</a>
+                </div>
+                <div class="item">
+                    <a href="">Tất cả</a>
+                </div>
+            </div>
+            
+            <form method="POST" action="/viewcart">
+                <button type="submit">View Cart</button>
+            </form>
+        </div>
+
+        <div class="content-right">
+            <div class="product-grid">
+                {% for row in table %}
+                    <div class="product-item">            
+                        <img id="pr_image" src="{{row[4]}}" alt="{{row[4]}}">
+                        <h2>{{ row[1]}}</h2>
+                        <h3>{{row[6]}} VNĐ</h3>
+                        {% if username %}
+                        <form action="/cart/add" method="POST">
+                            <input type="hidden" name="plant_id" value="{{ row[0] }}">
+                            <input type="number" name="quantity" value="1" min="1">
+                            <br>
+                            <button type="submit">Thêm vào giỏ hàng</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <img id="footer_img>" src="/static/picture/footer.png" style="width: 100%;">
+    </div>
+
+
+</body>
+</html>

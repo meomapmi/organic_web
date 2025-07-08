@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='style_cart.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search-result.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_table_dataframe.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="homename"><a href="/">Omgreen</a></div>
+        <div>
+            <ul class="a">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/shopping">Shopping</a></li>
+                <li><a href="/blog">Blogs</a></li>
+                {% if username %}
+                <a href="/MyAccount/MyShop"><li>Cửa hàng của tôi</li></a>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="icon_header">
+            <ul>
+                <li><img src="https://cdn-icons-png.flaticon.com/256/3917/3917132.png" alt="search"></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/1200px-Shopping_cart_icon.svg.png" alt="cart"></li>
+                <li><img src="/static/picture/Ellipse 3.png"></li>
+              
+        </div>
+        </div>
+
+    <div id="banner2">
+        <h2>GIỎ HÀNG</h2>
+    </div>
+
+    <!--Hiện dữ liệu nếu searchtext không rỗng-->
+    <table class="cart">
+        <tr>
+            <th>ID</th>
+            <th>Tên sản phẩm</th> 
+            <th>Giá</th> 
+            <th>Số lượng</th>
+        </tr>
+        <tbody>
+            {% for plant in carts %}
+            <tr>
+                <td>{{ plant['id'] }}</td>
+                <td>{{ plant['name'] }}</td>
+                <td>{{ plant['price'] }}</td>
+                <td>{{ plant['quantity'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="cart-button">
+        <button type="submit" class="cart-update">Update Cart</button>
+        <button type="submit" class="cart-proceed"><a href="/pay">Proceed</a></button>
+    </div>
+
+    <div id="footer">
+        <img id="footer_img>" src="/static/picture/footer.png" >
+    </div>
+</body>
+</html>

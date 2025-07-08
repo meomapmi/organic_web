@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Payment Web</title>
+</head>
+<style>
+    *{
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">Thanh toán bằng thẻ</h1>
+    <div style="justify-content: center;"></div>
+    <form action="/charge" method="POST">
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+            data-amount="0"
+            data-name="Thanh toán bằng thẻ"
+            data-description="Nhập thông tin thanh toán"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-currency="VND">
+        </script>
+    </form>
+</body>
+</html>

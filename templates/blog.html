@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+
+    <link rel="stylesheet"  href="{{ url_for('static', filename='style_cart.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search-result.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_table_dataframe.css') }}">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='blog.css') }}">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="homename"><a href="/">Omgreen</a></div>
+        <div>
+            <ul class="a">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/shopping">Shopping</a></li>
+                <li><a href="/blog">Blogs</a></li>
+                {% if username %}
+                <a href="/MyAccount/MyShop"><li>Cửa hàng của tôi</li></a>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="icon_header">
+            <ul>
+                <li><img src="https://cdn-icons-png.flaticon.com/256/3917/3917132.png" alt="search"></li>
+                {% if username %}
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/1200px-Shopping_cart_icon.svg.png" alt="cart"></li>
+                
+                <li><img src="/static/picture/Ellipse 3.png"></li>
+                {% else %}
+                <li><a href="/login" style="text-decoration: none;color: #000;font-weight: normal;">Đăng nhập</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+
+
+    <div id="banner3">
+        <h2>Omgreen's Blog</h2>
+    </div>
+
+
+
+    <div id = "post">
+        {% for row in table %}
+            <div class="blog_post">
+                <div class = "post_left">
+                    <img id="blog_image" src="{{row[1]}}" alt="{{row[1]}}">
+                </div>
+
+                <div class = "post_right">
+                    <h2>{{ row[2] }}</h2>
+                    <p>{{ row[3] }}</p>
+                    <p>{{ row[4] }}</p>
+                    <br>
+                    <button>Xem thêm</button>
+                    <p>{{ row[5] }} bình luận</p>
+                    <p>Đăng bởi: {{ row[6]}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+    <div id="footer">
+        <img id="footer_img>" src="/static/picture/footer.png" >
+    </div>
+</body>

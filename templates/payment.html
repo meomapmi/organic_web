@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'payment.css')}}">
+    <link rel="stylesheet" href="/static/payment.css">
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Đơn Hàng</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="homename">Omgreen</div>
+        <div>
+            <ul>
+                <li>Trang chủ</li>
+                <li>Shop</li>
+                <li><a href="/blog">Blogs</a></li>
+                <a href="/MyAccount/MyShop"><li>Cửa hàng của tôi</li></a>
+            </ul>
+        </div>
+        <div class="icon_header">
+            <ul>
+                <li><img src="https://cdn-icons-png.flaticon.com/256/3917/3917132.png" alt="search"></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/1200px-Shopping_cart_icon.svg.png" alt="cart"></li>
+                {% if username %}
+                <li><img src="/static/picture/Ellipse 3.png"></li>
+                {% else %}
+                <li><a href="/login" style="text-decoration: none;color: #000;font-weight: normal;">Đăng nhập</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+        <div class="home">
+            <div><p>Thông tin đơn hàng</p></div>
+        </div>
+        
+<form action="/payment" method="post">
+    <div class="confirm">
+    <div class="receiver">
+        <div class="r">
+        <p style="font-size: 24px; margin-top: 0;"><b>Thông tin người nhận</b></p>
+        <label for="receiver_name">Mã khách hàng:</label>
+        <input type="text" id="receiver_id" name="receiver_id" required>
+        <br>
+        <label for="receiver_name">Tên khách hàng:</label>
+        <input type="text" id="receiver_name" name="receiver_name" required>
+        <br>
+        <label for="receiver_name">Số điện thoại:</label>
+        <input type="text" id="receiver_phone" name="receiver_phone" required>
+        <br>
+        <label for="receiver_name">Email:</label>
+        <input type="text" id="receiver_mail" name="receiver_mail" required>
+        <br>
+        <label for="receiver_address">Ghi chú:</label>
+        <input type="text" id="receiver_note" name="receiver_note" style="margin-bottom: 5px;">
+        <br><br>
+    </div>
+    </div>
+    <div class="delivery">
+        <div class="d">
+        <p style="font-size: 24px; margin-top: 0;"><b>Thông tin giao hàng</b></p>
+        <label for="receiver_address">Địa chỉ:</label>
+        <input type="text" id="receiver_address" name="receiver_address" required>
+        <br>
+        <label for="address">Tỉnh/thành phố:</label>
+        <select name="address" required>
+            <option value=""></option>
+            <option value="">Hà Nội</option>
+            <option value="">Hồ Chí Minh</option>
+        </select>   
+         <br>
+        <label for="address">Quận/huyện:</label>
+        <select name="address" required>
+            <option value=""></option>
+            <option value="">Đống Đa</option>
+            <option value="">Trung Liệt</option>
+        </select>    
+        <br>
+        <label for="address">Phường/xã:</label>
+        <select name="address" required>
+            <option value=""></option>
+            <option value="">Thịnh Quang</option>
+            <option value="">Trung Liệt</option>
+        </select>    
+        <br>
+    
+        <label>Phương thức thanh toán:</label>
+        <select name="payment_method" required>
+            <option value="online">Thanh toán online</option>
+            <option value="offline">Thanh toán offline</option>
+        </select>
+        <br>
+    </div>
+    </div>
+</div>
+    <input type="submit" value="Xác nhận">
+</form>
+
+
+
+
+
+</body>
+</html>
