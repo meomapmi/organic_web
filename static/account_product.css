@@ -1,0 +1,113 @@
+body{
+    background-color: #00a542;
+    
+    
+}
+.homename{
+    font-family: 'kaushan script';
+    color: #00A542;
+    font-size:300%;
+    margin-left: 40px;
+}
+.center{
+            background-color: #ffffff;
+            
+}
+.header img{
+    width: 40px;
+    height: 40px;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.search{
+    display: flex;   
+}
+.search input{
+    width: 250px;
+}
+.search img{
+    background-color: #00a542;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user div{
+    margin-left: 20px;
+}
+.index{
+    height: 80px;
+    margin-top: 1%;
+    background-color: #eaeaea;
+    font-size: 200%;
+    align-self: flex-end;
+    display: flex;
+}
+.main{
+    background-color: #eaeaea;
+    display: flex;
+}
+.left{
+    text-align: center;
+    margin-left: 80px;
+    font-size: 130%;
+    background-color: #ffffff;
+    height: 355px;
+    width: 250px;
+
+}
+
+.main img{
+    width: 220px;
+    height: 190px;
+}
+.right{
+    margin-left:5%;
+    background-color: #ffffff;
+    width: 70%;
+}
+.top{
+    display: flex;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+    height: 90px;
+    margin-bottom: 30px;
+
+}
+.under{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 80%;
+    text-align: center;
+}
+.left a{
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+.under p{
+    flex-wrap: wrap;
+    max-width: 200px;
+}
+.spme{
+    background-color: #00a542;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 100%;
+}
+.clientorder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}

@@ -1,0 +1,42 @@
+h1 {
+    color: #333;
+}
+form {
+    margin-top: 20px;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(45, 127, 64);
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+} 
+
+button:hover {
+    background-color: #0056b3;
+} 
+
+input[type = "text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#searchResult {
+    font-size: 18px;
+    color: rgb(45, 127, 64);
+    margin-top: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

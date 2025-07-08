@@ -1,0 +1,135 @@
+.homename {
+    font-family: 'kaushan script';
+    color: #00A542;
+    font-size:300%;
+    margin-left: 40px;
+    text-decoration: none;
+    font-weight: normal;
+}
+.homename a{
+    color: #00A542;
+    text-decoration: none;
+    font-weight: normal;
+}
+.header a{
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.icon_header img{
+    width: 40px;
+}
+
+.header ul{
+    list-style: none;
+    display:flex;
+
+    white-space: nowrap;
+    font-size: 150%;
+}
+
+.header li{
+    margin: 20px;
+    display:flex;
+
+
+}
+.home{
+    background-image: url('/static/picture/ảnh\ chính.png');
+    background-size: 100%;
+    padding: 150px;
+    background-position: bottom;
+    color: #ffffff;
+    text-align: center;
+    font-size: 150%;
+}
+.explore{
+    background-color: #00A542;
+    width: 150px;
+    height: 40px;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.benefit img{
+    width: 300px;
+    height: 300px;
+}
+.benefit{
+    text-align: center;
+    font-size: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.benefit div{
+    margin: auto;
+}
+.category{
+    background-color: #2d2777;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+.category div{
+    margin: auto;
+}
+.products img{
+    width: 300px;
+    height: 300px;
+}
+.products{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    font-size: 130%;
+}
+.products div{
+    margin-bottom: 50px;
+    margin: auto;
+}
+.products p{
+    margin-top: 0%;
+}
+.blog{
+    background-image: url('https://thuthuatnhanh.com/wp-content/uploads/2022/05/Background-xanh-la-cay-nhat-dep.jpg');
+    background-position:top;
+}
+.blogin img{
+    width: 350px;
+    height: 300px;
+}
+.blogin{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+}
+.blogin div{
+    margin: auto;
+}
+.email{
+    text-align: center;
+}
+.a a{
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}

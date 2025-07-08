@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'calibri';
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/regis.png);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding:  25px 30px;
+    border-radius: 5px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    text-transform:uppercase;
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 65px;
+    background: #27AE45;
+}
+
+/* .container .user-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type='text'], input[type='password'], input[type='email']{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container .button {
+    display: flex;
+    align-items: center;
+}
+
+button[type='submit']{
+    background-color: #27AE45;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type='submit']:hover{
+    background-color: #0056b3;
+}
+
+

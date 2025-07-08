@@ -1,0 +1,102 @@
+
+.home p{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+/* styles.css */
+
+body {
+    font-family: 'calibri';
+    font-size: 16px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Style for error message */
+.error {
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.confirm{
+    display: flex;
+    justify-content: center;
+}
+
+.receiver .r{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    padding-bottom: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.delivery .d{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receiver{
+    padding-right: 100px;
+    padding-top: 25px;
+}
+
+.delivery{
+    padding-top: 25px;
+}
+
+

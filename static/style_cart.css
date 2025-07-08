@@ -1,0 +1,85 @@
+/* styles.css */
+
+.cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart th, .cart td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.cart th {
+    background-color: #f2f2f2;
+}
+
+.cart tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cart button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width:150px
+}
+
+.cart button:hover {
+    background-color: #0056b3;
+}
+
+
+#banner2 {
+    width: 100%;
+    background-image: url("/static/picture/7f7c068a-da1a-4674-9c68-bf12ea622098.jpg");
+    height: 250px;
+    text-align: center;
+}
+
+#banner2 h2 {
+    font-size: 50px;
+    color:#ffffff;
+    padding-top: 90px;
+}
+
+
+
+
+
+.cart-button{
+    background-color: #aaa;
+    margin: 50px 1rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.6rem;
+}
+.cart-button > *{
+    width: 20%;
+}
+
+.cart-update{
+    background-color: #fff;
+    padding: 0 1rem;
+    text-align: center;
+}
+.cart-proceed{
+    background-color: green;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.cart {
+    margin: 50px 0px;
+}
+
+.Topic {
+    background-color:green ;
+}
