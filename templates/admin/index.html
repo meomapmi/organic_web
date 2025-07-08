@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storages</title>
+</head>
+<body>
+    <a href="/add">Add new storage</a>
+    <h1>Storage list</h1>
+    <div class="menu">
+        <ul>
+            {% for plant in plants %}
+            <li>
+                {{plant['plantid']}} ({{plant['plantname']}}) - {{plant['price']}}
+                <form action="/delete/{{plant['plantid']}}" method="post" style="display: inline;">
+                <button type="submit">Delete</button></form>
+                <a href="/edit/{{plant['plantid']}}">Edit</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
