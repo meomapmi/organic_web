@@ -1,0 +1,37 @@
+#banner3 {
+    width: 100%;
+    background-image: url("/static/picture/405181060_1023093348902079_3909101880026076589_n.png");
+    height: 350px;
+    text-align: center;
+}
+
+#banner3 h2 {
+    font-size: 50px;
+    color:#ffffff;
+    padding-top: 130px;
+}
+
+#post {
+    margin: 50px 0px;
+    width: 70%;
+    margin-left: 50px;
+}
+
+.blog_post {
+    display: flex;
+    margin-bottom:50px ;
+}
+
+.post_left {
+    margin-right: 60px;
+}
+
+#blog_image {
+    width: 400px;
+    height: 320px;
+    border: 10px;
+}
+
+.post_right {
+    margin-top: -30px;
+}
