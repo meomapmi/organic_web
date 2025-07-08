@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Omgreen - Thế giới organic</title>
+</head>
+<body>
+    <div class="header">
+    <div class="homename"><a href="/">Omgreen</a></div>
+    <div>
+        <ul class="a">
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/shopping">Shopping</a></li>
+            <li><a href="/blog">Blogs</a></li>
+            {% if username %}
+            <a href="/MyAccount/MyShop"><li>Cửa hàng của tôi</li></a>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="icon_header">
+        <ul>
+            <li><img src="https://cdn-icons-png.flaticon.com/256/3917/3917132.png" alt="search"></li>
+            {% if username %}
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/1200px-Shopping_cart_icon.svg.png" alt="cart"></li>
+            
+            <li><img src="/static/picture/Ellipse 3.png"></li>
+            {% else %}
+            <li><a href="/login" style="text-decoration: none;color: #000;font-weight: normal;">Đăng nhập</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    </div>
+    <div class="home">
+        
+        <div><p>Khám phá các loại trái cây và rau quả tươi nhất trên trang chủ của chúng tôi. Chúng tôi cam kết mang đến những điều tốt nhất cho sức khỏe và hạnh phúc của bạn. Hãy chọn sự tươi mát hàng ngày để có một cuộc sống khỏe mạnh, tràn đầy sức sống!</p></div>
+        <div class="explore">Khám phá</div>
+    </div>
+    <div style="text-align: center;margin-top: 70px;font-size: 140%;">Chào mừng đến với ngôi nhà của chúng tôi!</div>
+    <div style="font-size: 200%;text-align: center;margin-top: 25px;margin-bottom: 30px;"><strong>LỢI ÍCH</strong></div>
+    <div class="benefit">
+        <div><img src="https://media.vietravel.com/images/NewsPicture/trai-cay-tay-au4.jpg" alt="Ảnh 1"><p>Sản phẩm tươi ngon</p></div>
+        <div><img src="https://www.skyfarm.vn/uploads/tin-tuc/mang-nha-kinh.jpg" alt="Ảnh 2>"><p>An toàn vệ sinh thực phẩm</p></div>
+        <div><img src="https://c8.alamy.com/comp/EMJD87/germany-saxony-dresden-altmarkt-autumn-market-fruits-flowers-EMJD87.jpg" alt="Ảnh 3"><p>Đa dạng và phong phú</p></div>
+    </div>
+    <div style="text-align:center;color: aliceblue;font-size: 200%; background-color: #2d2777;height: 100px; margin-top: 50px;"><b>DANH MỤC</b></div>
+    <div class="category">
+        
+                <div><img src="/static/picture/Group 10.png" alt="rau củ hữu cơ"><p>RAU CỦ HỮU CƠ</p></div>
+                <div><img src="/static/picture/Group 11.png" alt="trái cây"><P>TRÁI CÂY</P></div>
+                <div><img src="/static/picture/Group 12.png" alt="hoa"><P>HOA</P></div>
+                <div><img src="/static/picture/Group 13.png" alt="dụng cụ làm vườn"><P>DỤNG CỤ LÀM VƯỜN</P></div>
+                <div><img src="/static/picture/Group 14.png" alt="all"><P>ALL</P></div>
+    </div>
+    <div style="text-align: center;background-color: #28B046; font-size: 200%;color: #ffffff; width: 300px; margin: auto;"><p><b>SẢN PHẨM</b></p></div>
+    <div class="products">
+                <div>
+                    <img src="https://product.hstatic.net/1000237150/product/untitled_2_610a0e39840048e586ab188f0d93f785_master.png" alt="dưa lê">
+                    <p>Dưa lê</p>
+                    <p>25000</p>
+                </div>
+                <div>
+                    <img src="https://product.hstatic.net/1000237150/product/4a-anh-got-vo-1-1528448456466805529400_0ffa97ba31284dac81683fe05c112e30_master.jpeg" alt="dưa hấu">
+                    <p>Dưa hấu</p>
+                    <p>20000</p>
+                </div>
+                <div>
+                    <img src="https://product.hstatic.net/1000237150/product/2272-1_bc629c8248764508a2a75cb21f29983a_medium.jpg" alt="củ dền">
+                    <p>Củ dền</p>
+                    <p>18000</p>
+                </div>
+                <div>
+                    <img src="https://product.hstatic.net/1000237150/product/untitled_685b04f4be824e079b44eee697b399bb_medium.png" alt="đậu đũa">
+                    <p>Đậu đũa</p>
+                    <p>16000</p>
+                </div>
+                <div>
+                    <img src="https://product.hstatic.net/1000237150/product/11437t_022e33a1f9a1437e9fa25d28815fbaa8_medium.jpg" alt="đậu trứng rồng">
+                    <p>Đậu trứng rồng</p>
+                    <p>60000</p>
+                </div>
+                <div>
+                    <img src="https://product.hstatic.net/1000237150/product/21351_1_95085ea75ea8447daaa6deb38812d30a_medium.jpg" alt="bắp ngọt">
+                    <p>Bắp ngọt</p>
+                    <p>23000</p>
+                </div>
+    </div>
+    <div class="blog">
+        <div style="text-align: center;margin-bottom: 50px;font-size: 250%;"><b>Blog</b></div>
+        <div class="blogin">
+                        <div>
+                            <img src="/static/picture/dâu tây.png" alt="dâu tây">
+                            <p>Trái cây liệu có nhiều đường như bạn nghĩ</p>
+                        </div>
+                        <div>
+                            <img src="/static/picture/rau củ quả.jpg" alt="rau củ quả">
+                            <p>Ích lợi của việc ăn rau củ mỗi ngày?</p>
+                        </div>
+                        <div>
+                            <img src="/static/picture/dụng cụ làm vườn.jpg" alt="dụng cụ làm vườn">
+                            <p>Dụng cụ làm vườn thông dụng.</p>
+                        </div>
+        </div>
+    </div>
+    <p style="text-align: center;font-size: 120%;">Đăng ký nhận menu rau củ quả - Trái cây cập nhật hàng ngày</p>
+    <p style="text-align: center;">Omgreen sẽ gửi cho bạn list sản phẩm mới nhất từ cửa hàng đươc cập nhật hàng ngày.</p>
+    <div class="email" style="margin: auto;">
+        <input type="email" id="email" name="email" style="width: 300px;height: 40px;font-size: 120%;" placeholder="Email" required>
+        <button type="submit" class="submit-button"><img src="/static/picture/mũi tên.png" alt="next" width="30" height="20"></button>
+    </div>
+    <footer class="footer">
+        <img src="/static/picture/footer.png" alt="footer" style="display: flex;justify-content: center;align-items: center; margin-top: 70px;width: 100%;">
+    </footer>
+</body>
+</html>
